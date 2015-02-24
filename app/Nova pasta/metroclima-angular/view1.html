@@ -1,0 +1,16 @@
+<div id="wrapper_tempo" ng-controller="MainCtrl">
+	<ul id="tempo_estacao" ng-repeat="estacao in estacoes" >
+		<li>
+			<p class="titulo">{{estacao.estacao}}</p>
+			<p class="temperatura">
+				<span>{{estacao.temperaturaExterna}}<sup id="graus"> ºC</sup></span>
+				<img class="icone_tempo" src="images/ico_{{estacao.iconePrevisao}}.png" title="{{estacao.iconePrevisao}}">
+			</p>
+			<p class="min_max">
+				<span>min. {{estacao.temperaturaMinimaPrevisao}}º / </span>
+				<span>max. {{estacao.temperaturaMaximaPrevisao}}º</span>
+			</p>
+		</li>
+	</ul>
+
+</div>

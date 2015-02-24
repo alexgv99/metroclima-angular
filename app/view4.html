@@ -1,0 +1,31 @@
+<div id="largura_ceic">
+<div ng-controller="PredictionCtrl">
+    <!--
+    <div ng-repeat="estacao in estacoes" style="float:right">
+        <procempa-popup estacao="estacao"></procempa-popup><hr>
+    </div>
+    -->
+	<div id="mapa">
+		<leaflet center="poaCenter" markers="markers" width="640px" height="720px"></leaflet>
+	</div>
+	<div id="semana">
+		<h2>Previsões</h2>
+		<ul id="dias_semana" ng-repeat="previsao in previsoes" >
+			<li>
+				<p class="dias">
+					{{previsao.data | date:'EEEE dd/MM/yyyy'}}
+					<img class="mapa_icone_tempo" src="images/ico_{{previsao.iconePrevisao}}.png" title="{{previsao.iconePrevisao}}">
+				</p>
+				<p class="min_max2">
+					<span>mín. {{previsao.temperaturaMinima}}º / </span>
+					<span>máx. {{previsao.temperaturaMaxima}}º</span>
+				</p>
+				<p class="comentario">
+					<span>{{previsao.texto}}</span>
+				</p>
+			</li>
+		</ul>
+	</div>
+</div>
+</div>
+

@@ -1,0 +1,20 @@
+<div id="wrapper_tempo" ng-controller="MainCtrl">
+
+	<ul id="tempo_estacao" ng-repeat="estacao in estacoes | filter: estacaoSelecionada" >
+		<li>
+		<div class="styled-select">
+		<select class="titulo" ng-model="estacaoSelecionada" ng-options="estacao.estacao as estacao.estacao for estacao in estacoes">
+		</select></div>
+			<p class="temperatura">
+				<span>{{estacao.temperaturaExterna}}<sup id="graus"> ºC</sup></span>
+				<img class="icone_tempo" src="images/ico_{{estacao.iconePrevisao}}.png" title="{{estacao.iconePrevisao}}">
+				<!--<img class="icone_tempo" src="http://www2.portoalegre.rs.gov.br/ceic/images/ico_{{estacao.iconePrevisao}}.png" title="{{estacao.iconePrevisao}}">-->
+			</p>
+			<p class="min_max">
+				<span>min. {{estacao.temperaturaMinimaPrevisao}}º / </span>
+				<span>max. {{estacao.temperaturaMaximaPrevisao}}º</span>
+			</p>
+		</li>
+	</ul>
+
+</div>

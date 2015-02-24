@@ -1,0 +1,45 @@
+<div id="largura_ceic_interna">
+	<div id="previsao_pagina" ng-controller="PredictionCtrl">
+		<h2>Confira a previsão da semana</h2>
+		<div class="previsao_linha" ng-repeat="previsao in previsoes" >
+			<div class="previsao_icone">
+				<img src="images/ico_{{previsao.iconePrevisao}}.png" title="{{previsao.iconePrevisao}}">
+			</div>
+			<div class="previsao_texto">	
+				<p>
+				
+					<span class="dias">{{previsao.data | date:'EEEE dd/MM/yyyy'}}</span></br>
+					<span>{{previsao.texto}}</span></br>
+					<span>Temperaturas entre {{previsao.temperaturaMinima}}º e {{previsao.temperaturaMaxima}}º.</span>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<!--
+<div id="largura_ceic">
+
+<div>
+	<div ng-controller="PredictionCtrl">
+		<div>
+			<h2>Confira a previsão da semana</h2>
+			<ul ng-repeat="previsao in previsoes" >
+				<li>
+					
+						<img src="images/ico_{{previsao.iconePrevisao}}.png" title="{{previsao.iconePrevisao}}">
+					<p>
+						<span>{{previsao.data | date:'dd/MM - EEEE'}}</span>
+						<span>{{previsao.texto}}</span>
+						<span>Temperaturas entre {{previsao.temperaturaMinima}}º e {{previsao.temperaturaMaxima}}º.</span>
+					</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<tt>Alessandra, esta página é a equivalente a <a href='http://www2.portoalegre.rs.gov.br/ceic/default.php?p_secao=42' target="_blank">esta</a> no CEIC...</tt>
+</div>
+</div>
+-->

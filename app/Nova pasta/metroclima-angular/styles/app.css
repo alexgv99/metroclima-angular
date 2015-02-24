@@ -1,0 +1,279 @@
+/* app css stylesheet */
+
+
+/*css reset___________________*/
+
+p, pre {
+    margin: 0;
+}
+/*_____________________________*/
+
+
+.menu {
+  list-style: none;
+  border-bottom: 0.1em solid black;
+  margin-bottom: 2em;
+  padding: 0 0 0.5em;
+}
+
+.menu:before {
+  content: "[";
+}
+
+.menu:after {
+  content: "]";
+}
+
+.menu > li {
+  display: inline;
+}
+
+.menu > li:before {
+  content: "|";
+  padding-right: 0.3em;
+}
+
+.menu > li:nth-child(1):before {
+  content: "";
+  padding: 0;
+}
+
+ul{
+list-style: none;
+}
+
+#tempo_estacao{
+	background-color:#F6F6F6;
+	font-family: Helvetica, sans serif;
+	color:#3E3D40;
+	padding:10px;
+	margin-left:2px;
+}
+
+.titulo{
+	font-size:20px;
+}
+
+.temperatura{
+	font-size:40px;
+	font-weight: 100;
+	margin-top: 20px;
+}
+
+.min_max{
+	font-size:13px;
+	font-weight: 100;
+}
+
+sup{
+	font-size:24px;
+	font-weight: 100;
+}
+
+.icone_tempo{
+	float: right;
+}
+
+
+#wrapper_tempo{
+	width: 240px;	
+	margin: 0 auto;
+}
+
+/*______________________________________select*/
+
+
+.styled-select select {
+	color:#3E3D40;
+	background: transparent;
+	width: 245px;
+	border: 0;
+	border-radius: 0;
+	-webkit-appearance: none;
+	cursor:pointer;
+	margin-left:-3px;
+   }
+   
+.styled-select {
+   width: 220px;
+   overflow: hidden;
+   background: url('../images/seta.png') no-repeat right;	
+
+   }
+   
+select option {
+	margin-bottom:5px;
+}
+ 
+ 
+ 
+ 
+/*______________________________________estilos_lista*/  
+   
+#lista_wrapper_tempo{
+	width: 250px;	
+	margin: 0 auto;
+}
+
+
+#lista_tempo_estacao{
+	border-top: 1px solid #9C9E9F;
+    color: #3e3d40;
+    font-family: Helvetica,sans serif;
+    font-weight: 100;
+    margin-left: 2px;
+    padding: 10px 0px 10px 2px;
+    margin-top: -10px;
+}
+
+.lista_tit{
+	float:left;
+	font-weight: normal;
+}
+
+.lista_temp{
+	float:right;
+	font-size: 20px;
+	width: 60px;
+	text-align: right;
+}
+
+.lista_min_max{
+ 	clear: both;
+    font-size: 11px;
+    line-height: 0;
+    margin-left: 1px;
+}
+
+.lista_icone_tempo{
+	width:30px;
+	float:right;
+	margin-right: 5px;
+}
+
+#grau {
+    font-size: 12px;
+    font-weight: normal;
+    vertical-align: top;
+}
+
+#lista_conjunto {
+    position: relative;
+    top: 4px;
+}
+
+
+/*______________________________________fim_estilos_lista*/ 
+
+
+
+ 
+/*______________________________________estilos_MAPA*/
+
+
+#largura_ceic{
+	width:1000px;
+	margin:0 auto;
+}  
+
+#largura_ceic_interna{
+	width:600px;
+	margin:0 auto;
+}  
+#mapa{
+	float: left;
+}
+
+
+#semana{
+    float: right;
+    margin-right: 20px;
+    width: 310px;
+}	
+
+#semana h2, #previsao_pagina h2{
+	font-weight:100;
+	margin: 0 0 30px;
+}
+	
+#dias_semana{
+	border-top: 1px solid #9C9E9F;
+    color: #3e3d40;
+    font-family: Helvetica,sans serif;
+    font-weight: 100;
+    margin-left: 2px;
+    padding: 10px 0px 10px 2px;
+    margin-top: -10px;
+}
+
+.mapa_icone_tempo{
+    float: right;
+    margin-top: 18px; /*quando tem a div comentario junto*/
+    margin-top: 6px;
+    width: 45px;
+}
+
+.dias{
+	font-size:13px;
+	font-weight: 600;
+	text-transform: capitalize;
+}
+
+.min_max2{
+	font-size: 22px;
+    font-weight: 100;
+    margin-top: 4px;
+
+}
+
+.comentario{
+	font-size:13px;
+	font-weight: 100;
+}
+
+
+/*______________________________________estilos_BALOES*/
+
+
+#mapa p{
+	margin: 5px 0;
+}
+
+#mapa p:first-child{
+	text-weight:bold;
+}
+
+.leaflet-popup-content-wrapper{
+	width: 200px;
+}
+
+#mapa .mapa_icone_tempo{
+	margin-top:0;
+}
+
+
+#mapa .min_max2 {
+    margin: 10px 0;
+    font-size:30px;
+}
+
+
+/*______________________________________estilos_TEXTO_PREVISOES*/
+
+.previsao_texto{
+	width: 85%;
+	float: right;
+	font-size: 13px;
+}
+
+.previsao_icone{
+	width: 15%;
+	float: left;
+}
+
+.previsao_linha{
+    margin-bottom: 30px;
+    overflow: auto;
+/*    padding-bottom: 30px;
+    border-bottom: 1px solid #9C9E9F;*/
+}
